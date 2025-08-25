@@ -6,51 +6,55 @@
 
 @layer base {
   :root {
-    /* Base Colors */
-    --background: 0 0% 100%;
-    --foreground: 222 84% 4.9%;
+    /* Dark Crypto Theme - Inspired by Modern Crypto Sites */
+    --background: 210 11% 4%;
+    --foreground: 213 31% 91%;
     
-    /* Tech-Inspired Palette */
-    --primary: 229 84% 5%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 236 72% 79%;
+    /* Vibrant Accent System */
+    --primary: 84 81% 44%;
+    --primary-foreground: 210 11% 4%;
+    --primary-glow: 84 100% 60%;
     
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
+    --secondary: 217 19% 12%;
+    --secondary-foreground: 213 31% 91%;
     
-    --accent: 236 72% 79%;
-    --accent-foreground: 229 84% 5%;
+    --accent: 84 81% 44%;
+    --accent-foreground: 210 11% 4%;
     
-    --tech-blue: 217 91% 60%;
-    --tech-purple: 263 85% 70%;
-    --tech-cyan: 187 85% 53%;
+    --crypto-green: 84 81% 44%;
+    --crypto-lime: 84 100% 60%;
+    --crypto-purple: 263 85% 70%;
+    --crypto-blue: 217 91% 60%;
+    --crypto-cyan: 187 85% 53%;
     
-    /* Neutral Palette */
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
+    /* Dark Card System */
+    --card: 217 19% 8%;
+    --card-foreground: 213 31% 91%;
     
-    --card: 0 0% 100%;
-    --card-foreground: 222 84% 4.9%;
+    --muted: 217 19% 12%;
+    --muted-foreground: 215 16% 57%;
     
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 236 72% 79%;
+    --border: 217 19% 18%;
+    --input: 217 19% 12%;
+    --ring: 84 81% 44%;
     
     /* Design Tokens */
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(263 85% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(236 72% 79%), hsl(187 85% 53%));
-    --gradient-hero: linear-gradient(135deg, hsl(229 84% 5%) 0%, hsl(217 91% 60%) 50%, hsl(263 85% 70%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(220 14.3% 97%) 100%);
+    /* Crypto-Inspired Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(84 81% 44%) 0%, hsl(84 100% 60%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(263 85% 70%) 0%, hsl(217 91% 60%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(210 11% 4%) 0%, hsl(217 19% 8%) 50%, hsl(217 19% 12%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(217 19% 8%) 0%, hsl(217 19% 10%) 100%);
+    --gradient-neon: linear-gradient(90deg, hsl(84 81% 44%) 0%, hsl(84 100% 60%) 50%, hsl(187 85% 53%) 100%);
     
-    /* Shadows */
-    --shadow-card: 0 4px 6px -1px hsl(220 13% 91% / 0.1), 0 2px 4px -1px hsl(220 13% 91% / 0.06);
-    --shadow-card-hover: 0 20px 25px -5px hsl(220 13% 91% / 0.15), 0 10px 10px -5px hsl(220 13% 91% / 0.1);
-    --shadow-hero: 0 25px 50px -12px hsl(217 91% 60% / 0.25);
+    /* Glowing Shadows */
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 8px 40px hsl(0 0% 0% / 0.4), 0 0 20px hsl(84 81% 44% / 0.1);
+    --shadow-neon: 0 0 30px hsl(84 81% 44% / 0.4), 0 0 60px hsl(84 81% 44% / 0.2);
+    --shadow-purple: 0 0 30px hsl(263 85% 70% / 0.3);
     
-    /* Animations */
+    /* Smooth Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -111,24 +115,45 @@
 }
 
 @layer components {
-  /* Hero gradient background */
+  /* Crypto-inspired gradient backgrounds */
   .gradient-hero {
     background: var(--gradient-hero);
+    position: relative;
   }
   
-  /* Card styles */
+  .gradient-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at top, hsl(84 81% 44% / 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, hsl(263 85% 70% / 0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* Enhanced card styles */
   .card-modern {
     background: var(--gradient-card);
     box-shadow: var(--shadow-card);
     transition: var(--transition-smooth);
+    border: 1px solid hsl(217 19% 18%);
   }
   
   .card-modern:hover {
     box-shadow: var(--shadow-card-hover);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    border-color: hsl(84 81% 44% / 0.3);
   }
   
-  /* Text gradients */
+  .card-neon {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-neon);
+    border: 1px solid hsl(84 81% 44% / 0.2);
+  }
+  
+  /* Text effects */
   .text-gradient {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
@@ -136,13 +161,56 @@
     background-clip: text;
   }
   
+  .text-neon {
+    color: hsl(84 100% 60%);
+    text-shadow: 0 0 10px hsl(84 81% 44% / 0.5);
+  }
+  
   /* Interactive elements */
   .interactive-scale:hover {
-    transform: scale(1.02);
+    transform: scale(1.05) translateY(-2px);
   }
   
   .interactive-glow:hover {
-    box-shadow: var(--shadow-hero);
+    box-shadow: var(--shadow-neon);
+  }
+  
+  /* Numbered cards */
+  .numbered-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(217 19% 18%);
+    transition: var(--transition-smooth);
+  }
+  
+  .numbered-card:hover {
+    border-color: hsl(84 81% 44% / 0.4);
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  .numbered-card.highlight {
+    background: var(--gradient-primary);
+    color: var(--primary-foreground);
+    box-shadow: var(--shadow-neon);
+  }
+  
+  /* Floating elements */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Pulse glow effect */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes pulseGlow {
+    from { box-shadow: 0 0 20px hsl(84 81% 44% / 0.3); }
+    to { box-shadow: 0 0 40px hsl(84 81% 44% / 0.6); }
   }
 }
 

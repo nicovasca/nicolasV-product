@@ -32,11 +32,16 @@ const CaseStudyCard = ({
           alt={title}
           className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-accent/90 backdrop-blur-sm text-accent-foreground text-sm font-medium rounded-full">
+          <span className="px-4 py-2 bg-primary/90 backdrop-blur-sm text-primary-foreground text-sm font-bold rounded-full">
             {category}
           </span>
+        </div>
+        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <div className="w-8 h-8 bg-card/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+            <ExternalLink className="w-4 h-4 text-primary" />
+          </div>
         </div>
       </div>
       
@@ -64,7 +69,7 @@ const CaseStudyCard = ({
           <Button 
             variant="outline" 
             size="sm"
-            className="group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+            className="group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300"
             onClick={() => window.open(websiteUrl, '_blank', 'noopener,noreferrer')}
           >
             <span className="mr-2">Visit Site</span>

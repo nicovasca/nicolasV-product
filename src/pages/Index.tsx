@@ -1,6 +1,8 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import FeatureCards from "@/components/FeatureCards";
 import CaseStudyCard from "@/components/CaseStudyCard";
+import NumberedFeatures from "@/components/NumberedFeatures";
 import Contact from "@/components/Contact";
 
 import fintechImage from "@/assets/fintech-case.jpg";
@@ -44,6 +46,9 @@ const Index = () => {
         <Hero />
       </div>
 
+      {/* Features Section */}
+      <FeatureCards />
+
       {/* Case Studies Section */}
       <section id="case-studies" className="py-20 bg-background">
         <div className="container mx-auto px-6">
@@ -78,13 +83,13 @@ const Index = () => {
                 Let's discuss how we can bring your vision to life with the latest in technology innovation.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
                   Full-Stack Development
                 </span>
-                <span className="px-4 py-2 bg-tech-blue/10 text-tech-blue rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-crypto-blue/10 text-crypto-blue rounded-full text-sm font-medium">
                   Blockchain Solutions
                 </span>
-                <span className="px-4 py-2 bg-tech-purple/10 text-tech-purple rounded-full text-sm font-medium">
+                <span className="px-4 py-2 bg-crypto-purple/10 text-crypto-purple rounded-full text-sm font-medium">
                   AI Integration
                 </span>
               </div>
@@ -93,15 +98,37 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Numbered Features Section */}
+      <NumberedFeatures />
+
       {/* Contact Section */}
       <Contact />
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-8">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-primary-foreground/80">
-            © 2024 Digital Innovation Portfolio. Crafted with passion for technology and design.
-          </p>
+      <footer className="bg-card border-t border-border py-12">
+        <div className="container mx-auto px-6">
+          <div className="text-center">
+            <div className="mb-4">
+              <h3 className="text-xl font-bold text-foreground mb-2">Digital Innovation Portfolio</h3>
+              <p className="text-muted-foreground">
+                Crafting the future through fintech, blockchain, and AI solutions
+              </p>
+            </div>
+            <div className="flex justify-center space-x-6 mb-6">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Terms of Service
+              </a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Contact
+              </a>
+            </div>
+            <p className="text-muted-foreground text-sm">
+              © 2024 Digital Innovation Portfolio. All rights reserved.
+            </p>
+          </div>
         </div>
       </footer>
     </div>

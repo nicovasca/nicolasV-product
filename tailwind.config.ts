@@ -45,10 +45,12 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				tech: {
-					blue: 'hsl(var(--tech-blue))',
-					purple: 'hsl(var(--tech-purple))',
-					cyan: 'hsl(var(--tech-cyan))'
+				crypto: {
+					green: 'hsl(var(--crypto-green))',
+					lime: 'hsl(var(--crypto-lime))',
+					purple: 'hsl(var(--crypto-purple))',
+					blue: 'hsl(var(--crypto-blue))',
+					cyan: 'hsl(var(--crypto-cyan))'
 				}
 			},
 			backgroundImage: {
@@ -60,7 +62,8 @@ export default {
 			boxShadow: {
 				'card': 'var(--shadow-card)',
 				'card-hover': 'var(--shadow-card-hover)',
-				'hero': 'var(--shadow-hero)'
+				'neon': 'var(--shadow-neon)',
+				'purple': 'var(--shadow-purple)'
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
