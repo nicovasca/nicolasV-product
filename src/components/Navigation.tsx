@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,6 +58,7 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu button */}
@@ -82,6 +84,12 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
+            <div className="pt-2 border-t border-border/20 mt-2">
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">Theme</span>
+                <ThemeToggle />
+              </div>
+            </div>
           </div>
         )}
       </div>

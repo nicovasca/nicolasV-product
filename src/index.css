@@ -6,111 +6,110 @@
 
 @layer base {
   :root {
-    /* Dark Crypto Theme - Inspired by Modern Crypto Sites */
-    --background: 210 11% 4%;
-    --foreground: 213 31% 91%;
+    /* Light theme - blue palette */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 236 72% 79%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.75rem;
     
-    /* Vibrant Accent System */
-    --primary: 84 81% 44%;
-    --primary-foreground: 210 11% 4%;
-    --primary-glow: 84 100% 60%;
-    
-    --secondary: 217 19% 12%;
-    --secondary-foreground: 213 31% 91%;
-    
-    --accent: 84 81% 44%;
-    --accent-foreground: 210 11% 4%;
-    
-    --crypto-green: 84 81% 44%;
-    --crypto-lime: 84 100% 60%;
-    --crypto-purple: 263 85% 70%;
+    /* Blue-themed colors */
     --crypto-blue: 217 91% 60%;
-    --crypto-cyan: 187 85% 53%;
+    --crypto-light: 214 32% 91%;
+    --crypto-card: 0 0% 100%;
+    --crypto-accent: 236 72% 79%;
+    --crypto-muted: 210 40% 96%;
     
-    /* Dark Card System */
-    --card: 217 19% 8%;
-    --card-foreground: 213 31% 91%;
+    /* Light gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(236 72% 79%));
+    --gradient-secondary: linear-gradient(135deg, hsl(214 32% 91%), hsl(210 40% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%), hsl(214 32% 91%), hsl(213 27% 84%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(214 32% 91%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 96%));
+    --gradient-glow: radial-gradient(circle, hsl(217 91% 60% / 0.1), transparent 70%);
     
-    --muted: 217 19% 12%;
-    --muted-foreground: 215 16% 57%;
+    /* Light shadows */
+    --shadow-card: 0 4px 12px hsl(217 91% 60% / 0.1);
+    --shadow-hero: 0 8px 24px hsl(217 91% 60% / 0.2);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.1);
+    --shadow-neon: 0 0 30px hsl(217 91% 60% / 0.3), 0 0 60px hsl(217 91% 60% / 0.15);
     
-    --border: 217 19% 18%;
-    --input: 217 19% 12%;
-    --ring: 84 81% 44%;
-    
-    /* Design Tokens */
-    --radius: 1rem;
-    
-    /* Crypto-Inspired Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(84 81% 44%) 0%, hsl(84 100% 60%) 100%);
-    --gradient-secondary: linear-gradient(135deg, hsl(263 85% 70%) 0%, hsl(217 91% 60%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 11% 4%) 0%, hsl(217 19% 8%) 50%, hsl(217 19% 12%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(217 19% 8%) 0%, hsl(217 19% 10%) 100%);
-    --gradient-neon: linear-gradient(90deg, hsl(84 81% 44%) 0%, hsl(84 100% 60%) 50%, hsl(187 85% 53%) 100%);
-    
-    /* Glowing Shadows */
-    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
-    --shadow-card-hover: 0 8px 40px hsl(0 0% 0% / 0.4), 0 0 20px hsl(84 81% 44% / 0.1);
-    --shadow-neon: 0 0 30px hsl(84 81% 44% / 0.4), 0 0 60px hsl(84 81% 44% / 0.2);
-    --shadow-purple: 0 0 30px hsl(263 85% 70% / 0.3);
-    
-    /* Smooth Animations */
+    /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Base Colors */
+    /* Dark theme - blue palette */
     --background: 229 84% 5%;
     --foreground: 210 40% 98%;
-    
-    /* Adjust tech colors for dark mode */
-    --primary: 210 40% 98%;
-    --primary-foreground: 229 84% 5%;
-    --primary-glow: 236 72% 85%;
-    
-    --card: 220 13% 8%;
+    --card: 229 84% 8%;
     --card-foreground: 210 40% 98%;
-    
-    --secondary: 220 13% 15%;
+    --popover: 229 84% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 229 84% 5%;
+    --secondary: 215 27% 13%;
     --secondary-foreground: 210 40% 98%;
-    
+    --muted: 215 27% 13%;
+    --muted-foreground: 217 10% 64%;
     --accent: 236 72% 79%;
     --accent-foreground: 229 84% 5%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 215 27% 18%;
+    --input: 215 27% 18%;
+    --ring: 217 91% 60%;
     
-    --muted: 220 13% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    /* Dark blue-themed colors */
+    --crypto-blue: 217 91% 60%;
+    --crypto-dark: 229 84% 5%;
+    --crypto-card: 229 84% 8%;
+    --crypto-accent: 236 72% 79%;
+    --crypto-muted: 215 27% 13%;
     
-    --border: 220 13% 15%;
-    --input: 220 13% 15%;
-    --ring: 236 72% 79%;
-    
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(263 85% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(236 72% 79%), hsl(187 85% 53%));
-    --gradient-hero: linear-gradient(135deg, hsl(229 84% 5%) 0%, hsl(217 91% 40%) 50%, hsl(263 85% 50%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(220 13% 8%) 0%, hsl(220 13% 10%) 100%);
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(236 72% 79%));
+    --gradient-secondary: linear-gradient(135deg, hsl(215 27% 13%), hsl(229 84% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(229 84% 5%), hsl(217 91% 40%), hsl(236 72% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(229 84% 8%), hsl(215 27% 13%));
+    --gradient-subtle: linear-gradient(180deg, hsl(229 84% 5%), hsl(229 84% 8%));
+    --gradient-glow: radial-gradient(circle, hsl(217 91% 60% / 0.1), transparent 70%);
     
     /* Dark shadows */
-    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
-    --shadow-card-hover: 0 20px 25px -5px hsl(0 0% 0% / 0.4), 0 10px 10px -5px hsl(0 0% 0% / 0.3);
-    --shadow-hero: 0 25px 50px -12px hsl(217 91% 60% / 0.4);
+    --shadow-card: 0 4px 12px hsl(0 0% 0% / 0.3);
+    --shadow-hero: 0 8px 24px hsl(217 91% 60% / 0.4);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.2);
+    --shadow-neon: 0 0 30px hsl(217 91% 60% / 0.3), 0 0 60px hsl(217 91% 60% / 0.15);
   }
 }
 
@@ -162,8 +161,8 @@
   }
   
   .text-neon {
-    color: hsl(84 100% 60%);
-    text-shadow: 0 0 10px hsl(84 81% 44% / 0.5);
+    @apply text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text;
+    filter: drop-shadow(0 0 8px hsl(217 91% 60% / 0.5));
   }
   
   /* Interactive elements */
