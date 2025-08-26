@@ -14,7 +14,7 @@ const Hero = () => {
         
         {/* Ethereum Symbol */}
         <div className="absolute top-32 right-32 w-12 h-12 opacity-40">
-          <div className="w-full h-full bg-crypto-purple/20 rounded-lg flex items-center justify-center text-xl font-bold text-crypto-purple float-animation" style={{ animationDelay: '1s' }}>
+          <div className="w-full h-full bg-crypto-blue/20 rounded-lg flex items-center justify-center text-xl font-bold text-crypto-blue float-animation" style={{ animationDelay: '1s' }}>
             Ξ
           </div>
         </div>
@@ -25,14 +25,14 @@ const Hero = () => {
         
         {/* Geometric Shapes */}
         <div className="absolute top-1/2 left-10 w-8 h-8 border-2 border-primary/30 rounded-sm rotate-45 float-animation" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute bottom-20 right-40 w-6 h-6 bg-crypto-cyan/20 rounded-full pulse-glow"></div>
+        <div className="absolute bottom-20 right-40 w-6 h-6 bg-crypto-blue/20 rounded-full pulse-glow"></div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(132,204,22,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(132,204,22,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(66,153,225,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(66,153,225,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
-        <div className="max-w-5xl mx-auto animate-fade-in">
+        <div className="max-w-6xl mx-auto animate-fade-in">
           {/* Main Heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
             <span className="text-foreground">Innovating the</span>
@@ -42,8 +42,34 @@ const Hero = () => {
           
           {/* Subtitle */}
           <p className="text-xl md:text-2xl mb-12 text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Crafting cutting-edge solutions across <span className="text-primary">fintech</span>, <span className="text-crypto-purple">blockchain</span>, and <span className="text-crypto-cyan">AI</span> that transform industries and drive innovation.
+            Crafting cutting-edge solutions across <span className="text-primary">fintech</span>, <span className="text-crypto-blue">blockchain</span>, and <span className="text-accent">AI</span> that transform industries and drive innovation.
           </p>
+          
+          {/* About Me Section */}
+          <div className="bg-card/20 backdrop-blur-sm rounded-2xl p-8 mb-12 max-w-4xl mx-auto border border-border/20">
+            <h2 className="text-2xl font-bold mb-4 text-foreground">About Me</h2>
+            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+              I'm a passionate technologist with expertise in building scalable fintech platforms, 
+              decentralized blockchain applications, and intelligent AI systems. With a focus on 
+              innovation and user experience, I create solutions that bridge the gap between 
+              cutting-edge technology and real-world business needs.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-primary mb-2">5+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary mb-2">50+</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-primary mb-2">3</div>
+                <div className="text-sm text-muted-foreground uppercase tracking-wider">Core Specializations</div>
+              </div>
+            </div>
+          </div>
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -51,7 +77,7 @@ const Hero = () => {
               size="lg" 
               variant="hero"
               className="px-10 py-6 text-lg font-bold interactive-glow"
-              onClick={() => document.getElementById('case-studies')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('fintech')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Projects
             </Button>

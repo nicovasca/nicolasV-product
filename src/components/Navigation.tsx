@@ -23,7 +23,9 @@ const Navigation = () => {
 
   const navItems = [
     { label: 'Home', id: 'home' },
-    { label: 'Case Studies', id: 'case-studies' },
+    { label: 'Fintech', id: 'fintech' },
+    { label: 'Blockchain', id: 'blockchain' },
+    { label: 'AI', id: 'ai' },
     { label: 'Contact', id: 'contact' }
   ];
 
