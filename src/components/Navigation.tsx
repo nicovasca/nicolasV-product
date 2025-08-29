@@ -22,7 +22,6 @@ const Navigation = () => {
   };
 
   const navItems = [
-    { label: 'Home', id: 'home' },
     { label: 'Fintech', id: 'fintech' },
     { label: 'Blockchain', id: 'blockchain' },
     { label: 'AI', id: 'ai' },
@@ -42,7 +41,7 @@ const Navigation = () => {
             className="text-2xl font-bold cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <span className={`${isScrolled ? 'text-foreground' : 'text-primary-foreground'} transition-colors duration-300`}>
+            <span className={`${isScrolled ? 'text-foreground' : 'text-foreground'} transition-colors duration-300`}>
               Portfolio
             </span>
           </div>
@@ -54,7 +53,7 @@ const Navigation = () => {
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`font-medium transition-colors duration-300 hover:text-accent ${
-                  isScrolled ? 'text-foreground' : 'text-primary-foreground'
+                  isScrolled ? 'text-foreground' : 'text-foreground'
                 }`}
               >
                 {item.label}
