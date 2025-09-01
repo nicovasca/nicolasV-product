@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import heroWavesImage from "@/assets/hero-waves.png";
+// Hero waves image is now served from public folder
+const heroWavesImage = "/hero-waves.png";
 
 const Hero = () => {
   return (

@@ -3,9 +3,10 @@ import Hero from "@/components/Hero";
 import CaseStudySection from "@/components/CaseStudySection";
 import Contact from "@/components/Contact";
 
-import fintechImage from "@/assets/fintech-case-2.png";
-import blockchainImage from "@/assets/blockchain-case.jpg";
-import aiImage from "@/assets/ai-case.jpg";
+// Images are now served from public folder
+const fintechImage = "/fintech-case-2.png";
+const blockchainImage = "/blockchain-case.jpg";
+const aiImage = "/ai-case.jpg";
 
 const Index = () => {
   const caseStudies = [
