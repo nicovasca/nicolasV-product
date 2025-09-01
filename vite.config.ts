@@ -19,5 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: './', // This makes all paths relative instead of absolute
+  base: '/', // Use absolute paths for Vercel deployment
 }))
