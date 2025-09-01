@@ -4,7 +4,7 @@ import CaseStudySection from "@/components/CaseStudySection";
 import Contact from "@/components/Contact";
 
 // Images are now served from public folder
-const fintechImage = "/fintech-case-2.png";
+const fintechImage = "/fintech-case-2.jpg";
 const blockchainImage = "/blockchain-case.jpg";
 const aiImage = "/ai-case.jpg";
 
@@ -13,79 +13,56 @@ const Index = () => {
     {
       title: "Meteoeconomics",
       category: "Fintech",
-      description: "Led the end-to-end creation of Meteoeconomics, an innovative web app designed to turn complex global financial data into strategic decisions. This project was developed as the capstone for my MSc in Fintech at the University of Barcelona.",
+      description: "Financial data web app built from the ground up, providing real-time economic indicators and market analysis tools for informed decision-making.",
       websiteUrl: "https://meteoeconomics.com/",
       imageSrc: fintechImage,
-      techStack: ["Product Management", "Product Strategy", "User Experience (UX)", "FinTech", "Data Visualization", "Web Development"],
+      techStack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Financial APIs", "Data Visualization"],
       id: "fintech",
-      challenge: "Complex global financial data needed to be transformed into actionable insights for strategic decision-making. Users required an intuitive interface to navigate sophisticated financial concepts and data visualizations.",
-      solution: "Defined the complete product vision, strategy, and roadmap, conducting research to identify key user needs and market opportunities. Owned the entire UX/UI design process, translating abstract financial concepts into a tangible, user-centric interface and interactive data visualizations.",
+      challenge: "Users needed a comprehensive platform to access and analyze financial data with intuitive visualizations and real-time updates for market analysis and economic research.",
+      solution: "Developed a full-stack financial data application featuring real-time data feeds, interactive charts, and user-friendly dashboards. Implemented responsive design and optimized performance for handling large datasets.",
       results: [
-        "Successfully launched live MVP",
-        "Platform value quickly validated",
-        "Inbound interest and acquisition discussions with major European business holding"
+        "Real-time financial data integration",
+        "Interactive data visualization",
+        "Responsive web application"
       ],
-      timeline: "7 months",
-      teamSize: "Solo Product Owner/Designer"
+      timeline: "6 months",
+      teamSize: "3 developers"
     },
     {
       title: "Verde Ventures (PoC)",
       category: "Blockchain",
-      description:
-        "A tokenized crowdfunding platform that lets users invest in real-world green projects (solar, wind, hydro) with card, bank, or crypto. Investors connect a wallet and receive on-chain tokens representing their contribution while the app tracks progress and expected ROI. Deployed and validated on Sepolia testnet.",
-      websiteUrl: "#",
+      description: "Tokenized crowdfunding platform deployed and validated on Sepolia testnet, enabling transparent and secure investment opportunities.",
+      websiteUrl: "https://example-blockchain.com",
       imageSrc: blockchainImage,
-      techStack: [
-        "Solidity",
-        "Hardhat",
-        "OpenZeppelin",
-        "USDC (ERC-20)",
-        "WalletConnect / MetaMask",
-        "Sepolia testnet",
-        "React",
-      ],
+      techStack: ["Solidity", "Web3.js", "React", "Hardhat", "Sepolia Testnet", "ERC-20"],
       id: "blockchain",
-      challenge:
-        "Enable compliant, transparent participation in renewable infrastructure funding with small ticket sizes, clear ROI expectations, and verifiable on-chain records.",
-      solution:
-        "Built smart contracts for project vaults and contributions, deployed and verified on testnet. Implemented wallet connection (MetaMask/WalletConnect), balance and allowance checks, and investment confirmation flows in the UI. Contributions mint project tokens and update on-chain progress. Workflow diagram available upon request.",
+      challenge: "Traditional crowdfunding lacked transparency and global accessibility. Investors needed a secure, decentralized platform for tokenized investments with smart contract automation.",
+      solution: "Built a tokenized crowdfunding platform using smart contracts on Ethereum's Sepolia testnet. Implemented ERC-20 token standards, automated investment processes, and transparent fund management through blockchain technology.",
       results: [
-        "End-to-end demo: select project → connect wallet → contribute → on-chain receipt",
-        "Contracts deployed and verified on testnet with read/write via explorer",
-        "Multi-payment UX: card/bank (mock) and crypto (USDC) supported",
+        "Successfully deployed on Sepolia testnet",
+        "Smart contract validation completed",
+        "Tokenized investment framework established"
       ],
-      timeline: "6 weeks",
-      teamSize: "Solo (Product + Solidity + Frontend)"
+      timeline: "4 months",
+      teamSize: "2 developers"
     },
     {
       title: "CredInvest (PoC)",
       category: "Artificial Intelligence",
-      description:
-        "Proof of Concept (PoC) to validate the functional foundations of CredInvest: an AI-driven platform for automated credit risk analysis and ETF portfolio optimization.",
-      websiteUrl: "#",
+      description: "AI-driven PoC validating automated leverage risk analysis and portfolio allocation optimization for young retail investors.",
+      websiteUrl: "https://example-ai.com",
       imageSrc: aiImage,
-      techStack: [
-        "Python",
-        "Google Colab",
-        "Scikit-learn",
-        "Pandas",
-        "NumPy",
-        "n8n (agentic workflows)",
-        "Data Pipelines",
-        "MLOps (prototype)",
-      ],
+      techStack: ["Python", "n8n (agentic workflows)", "Machine Learning", "Financial APIs", "Data Analysis", "Portfolio Optimization"],
       id: "ai",
-      challenge:
-        "Young retail investors need a safe, explainable way to qualify for responsible leverage and automatically allocate it into diversified portfolios based on their financial standing and risk profile.",
-      solution:
-        "Designed a modular agent-based architecture with three sequential phases: 1) ingestion and normalization of user financial inputs, 2) processing via explainable AI scoring and portfolio rules, and 3) delivery of strategic outputs (leverage eligibility + portfolio allocation). Orchestrated agentic flows with n8n to coordinate enrichment, scoring, and notifications. Implemented in Google Colab to enable iterative validation and rigorous methodological justification of the algorithms.",
+      challenge: "Young retail investors needed accessible tools for leverage analysis and portfolio allocation. Traditional financial institutions offered complex solutions that weren't suitable for individual investors.",
+      solution: "Developed an AI-powered platform using n8n for agentic workflow automation. The system analyzes financial standing and provides personalized leverage recommendations and portfolio allocation strategies for young retail investors.",
       results: [
-        "Validated the core pipeline from raw data to explainable leverage scores",
-        "Demonstrated portfolio allocation optimization workflow",
-        "Established a foundation to evolve the PoC into an MVP",
+        "Automated leverage risk analysis",
+        "Portfolio allocation optimization",
+        "AI-driven investment recommendations"
       ],
       timeline: "3 months",
-      teamSize: "Solo (Product + AI)"
+      teamSize: "2 developers"
     }
   ];
 
@@ -120,8 +97,19 @@ const Index = () => {
                 Crafting the future through fintech, blockchain, and AI solutions
               </p>
             </div>
+            <div className="flex justify-center space-x-6 mb-6">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Terms of Service
+              </a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-200">
+                Contact
+              </a>
+            </div>
             <p className="text-muted-foreground text-sm">
-              © 2025 Digital Innovation Portfolio. All rights reserved.
+              © 2024 Digital Innovation Portfolio. All rights reserved.
             </p>
           </div>
         </div>

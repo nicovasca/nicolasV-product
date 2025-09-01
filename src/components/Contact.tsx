@@ -1,20 +1,26 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, Globe } from "lucide-react";
+import { Mail, Linkedin, Github, Globe } from "lucide-react";
 
 const Contact = () => {
   const contactMethods = [
     {
       icon: Mail,
       label: "Email",
-      value: "nico@nicovasquez.co",
-      href: "mailto:nico@nicovasquez.co"
+      value: "hello@portfolio.com",
+      href: "mailto:hello@portfolio.com"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Connect with me",
-      href: "https://www.linkedin.com/in/nico-vasquez/"
+      href: "#"
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "View my code",
+      href: "#"
     },
     {
       icon: Globe,
@@ -25,7 +31,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 pb-32 bg-muted/30">
+    <section id="contact" className="py-20 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
@@ -77,7 +83,7 @@ const Contact = () => {
                   size="lg"
                   variant="hero"
                   className="px-8 py-4 interactive-glow"
-                  onClick={() => window.location.href = 'mailto:nico@nicovasquez.co'}
+                  onClick={() => window.location.href = 'mailto:hello@portfolio.com'}
                 >
                   Start a Conversation
                 </Button>
